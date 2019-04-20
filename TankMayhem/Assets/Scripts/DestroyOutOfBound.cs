@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DestroyOutOfBound : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     private void OnTriggerExit(Collider collision)
     {
