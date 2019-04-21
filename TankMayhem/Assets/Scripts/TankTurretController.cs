@@ -17,6 +17,7 @@ public class TankTurretController : MonoBehaviour
     public GameObject bullet;
     public Joystick turretJoyStick;
     public float chargeThreshold;
+    public ParticleSystem muzzleFlash;
 
     private float energyCharge = 0;
 
@@ -56,6 +57,7 @@ public class TankTurretController : MonoBehaviour
     {
         var b = Instantiate(bullet, firePos.position, firePos.rotation);
         b.GetComponent<Rigidbody>().velocity = transform.forward * 10f;
+        muzzleFlash.Play();
     }
 
     void rotate()
